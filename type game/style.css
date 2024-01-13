@@ -1,0 +1,72 @@
+body{
+    background-color:violet;
+}
+.content-box{
+    background-color:steelblue;
+    border-radius: 5px;
+    padding: 50px;
+}
+.text-box{
+    background-color:black;
+    color: white;
+    font-family:monospace;
+    font-size: 20px;
+}
+
+.button-tryagain{
+    background-color:azure;
+    border-style: none;
+    padding: 4px;
+    border-radius: 2px;
+    font-weight: bold;
+    color:black;
+}
+.content-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.content-details .result-details{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+.result-details li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.text-box p{
+    letter-spacing: 2px;
+}
+.text-box p span.correct{
+    color:green;
+}
+.text-box p span{
+    position: relative;
+}
+.text-box p span.incorrect{
+    color:black;
+    background-color: red;
+    border-radius: 1px;
+    outline: 1px solid;
+}
+.text-box p span.active{
+    color:aqua;
+}
+.text-box p span.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background-color:pink;
+    animation: blink 0.8s ease-in-out infinite;
+}
+@keyframes blink {
+    50%{
+        opacity:1;
+    }
+}
